@@ -26,5 +26,4 @@ pyhton app.py
 ```
 
 >[!TIP]
->Choose a <b>name</b> to store in the created SQLite database and insert it into the `app.py` file. <br>
 >Suggested VSCode extension to view the database binary: <b>SQLite Viewer</b>
