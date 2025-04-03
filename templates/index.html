@@ -23,16 +23,14 @@
             <div class="col-md-8 col-lg-6 mx-auto">
                 <div class="form-container">
                     <h2 class="text-center mb-4">Monitoramento de Locomotivas</h2>
-                    <form>
+                    <form id="form-locomotiva">
                         <div class="mb-3">
-                            <label for="temperaturaMotor" class="form-label">Temperatura do Motor</label>
-                            <input type="number" class="form-control" id="temperaturaMotor"
-                                placeholder="Digite a temperatura">
+                            <label for="temperaturaMotor" class="form-label">Temperatura do Motor (ºC)</label>
+                            <input type="number" class="form-control" id="temperaturaMotor" placeholder="Digite a temperatura">
                         </div>
                         <div class="mb-3">
-                            <label for="consumoCombustivel" class="form-label">Consumo de Combustível/km</label>
-                            <input type="number" class="form-control" id="consumoCombustivel"
-                                placeholder="Digite o consumo">
+                            <label for="consumoCombustivel" class="form-label">Consumo de Combustível (l/km)</label>
+                            <input type="number" class="form-control" id="consumoCombustivel" placeholder="Digite o consumo">
                         </div>
                         <div class="mb-3">
                             <label for="jaSofreuManutencao" class="form-label">Já sofreu manutenção?</label>
@@ -42,18 +40,16 @@
                             </select>
                         </div>
                         <div class="mb-3">
-                            <label for="pressaoOleo" class="form-label">Pressão de Óleo do Motor</label>
+                            <label for="pressaoOleo" class="form-label">Pressão de Óleo do Motor (atm)</label>
                             <input type="number" class="form-control" id="pressaoOleo" placeholder="Digite a pressão">
                         </div>
                         <div class="mb-3">
-                            <label for="temperaturaCombustivel" class="form-label">Temperatura do Combustível</label>
-                            <input type="number" class="form-control" id="temperaturaCombustivel"
-                                placeholder="Digite a temperatura">
+                            <label for="temperaturaCombustivel" class="form-label">Temperatura do Combustível (ºC)</label>
+                            <input type="number" class="form-control" id="temperaturaCombustivel" placeholder="Digite a temperatura">
                         </div>
                         <div class="mb-3">
-                            <label for="temperaturaOleo" class="form-label">Temperatura do Óleo de Refrigeração</label>
-                            <input type="number" class="form-control" id="temperaturaOleo"
-                                placeholder="Digite a temperatura">
+                            <label for="temperaturaOleo" class="form-label">Temperatura do Óleo de Refrigeração (ºC)</label>
+                            <input type="number" class="form-control" id="temperaturaOleo" placeholder="Digite a temperatura">
                         </div>
                         <div class="text-center">
                             <button type="submit" class="btn btn-primary fw-bold">Prever</button>
@@ -71,6 +67,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+    <script src="../static/js/script.js"></script>        
 </body>
 
 </html>
