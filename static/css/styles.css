@@ -53,6 +53,11 @@ main {
     color: #006C67;
 }
 
+#jaSofreuManutencao option:hover {
+    background-color: #006C67 !important;
+    color: white !important; 
+}
+
 .btn-primary {
     background-color: #FDBF00;
     border: none;
