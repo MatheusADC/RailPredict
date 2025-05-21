@@ -72,6 +72,21 @@ main {
     background-color: #E5A500 !important;
 }
 
+.botao-alerta {
+    background-color: #FDBF00 !important;
+    color: #333 !important;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.botao-alerta:hover {
+    opacity: 0.9;
+    color: white !important;
+}
+
 footer {
     background: #006C67;
     color: white;
