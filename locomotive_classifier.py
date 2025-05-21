@@ -49,7 +49,7 @@ def criar_modelo():
         keras.layers.Dense(128, activation="relu"),
         keras.layers.Dense(6, activation="sigmoid")  
     ])
-    model.compile(optimizer="adam", loss="binary_crossentropy", metrics=["accuracy"])
+    model.compile(optimizer="adam", loss="binary_crossentropy", metrics=[keras.metrics.BinaryAccuracy(name="binary_accuracy")])
     return model
 
 def carregar_ou_treinar_modelo():
@@ -62,7 +62,7 @@ def carregar_ou_treinar_modelo():
         print("Modelo não encontrado, treinando modelo...")
         X_train, y_train = gerar_dados_treinamento()
         modelo = criar_modelo()
-        modelo.fit(X_train, y_train, epochs=2000, batch_size=32, validation_split=0.2)
+        modelo.fit(X_train, y_train, epochs=200, batch_size=32, validation_split=0.2)
         modelo.save(modelo_path) 
         print(f"Modelo treinado e salvo em {modelo_path}")
     
@@ -76,15 +76,9 @@ def classificar_resultado_com_modelo(valores, ja_sofreu_manutencao):
     parametros = list(LIMITES.keys())
     
     for i, valor in enumerate(previsao):
-        if valor >= 0.5:
+        if valor >= 0.7:
             campos_fora_do_ideal.append(parametros[i])
     
     return campos_fora_do_ideal
 
 modelo = carregar_ou_treinar_modelo()
-
-# novos_valores = [95.0, 3.0, 4.2, 30.0, 85.0] 
-# ja_sofreu_manutencao = "S"
-# campos_fora_do_ideal = classificar_resultado_com_modelo(novos_valores, ja_sofreu_manutencao)
-
-# print("Campos fora do limite ideal:", campos_fora_do_ideal)
