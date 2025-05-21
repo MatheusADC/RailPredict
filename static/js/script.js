@@ -33,7 +33,20 @@ document.getElementById('form-locomotiva').addEventListener('submit', function(e
     })
     .then(data => {
         if (data.camposForaDoIdeal.length > 0) {
-            alert('Campos fora do limite ideal: ' + data.camposForaDoIdeal.join(', '));
+            const camposFormatados = data.camposForaDoIdeal.map(campo => 
+                `<strong style="color: #FDBF00;">${campo}</strong>`
+            ).join('<br>');
+        
+            Swal.fire({
+                icon: 'warning',
+                title: 'Atenção!',
+                html: 'CAMPOS FORA DO IDEAL<br>' + camposFormatados,
+                confirmButtonText: 'OK',
+                customClass: {
+                    confirmButton: 'botao-alerta'
+                },
+                buttonsStyling: false
+            });
         } else {
             alert('Todos os campos estão dentro do limite ideal.');
         }
