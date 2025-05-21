@@ -3,6 +3,8 @@ import tensorflow as tf
 from tensorflow import keras
 import os
 
+os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
+
 LIMITES = {
     "Temperatura do Motor": "90.0",
     "Consumo de Combustível/km": "3.0",
